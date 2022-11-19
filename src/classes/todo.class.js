@@ -1,5 +1,14 @@
 export class Todo {
 
+    static fromJSON ( { tarea, id, completado, creado } ) {
+        const tempTodo = new Todo(tarea);
+        // recupero los metodos
+        tempTodo.id = id;
+        tempTodo.completado = completado;
+        tempTodo.creado = creado;
+
+        return tempTodo;
+    }
     
   
     constructor (tarea) {

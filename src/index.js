@@ -3,9 +3,8 @@ import { crearTodoHtml } from './js/componentes';
 import './styles.css';
 
 export const todoList = new TodoList();
-const tarea = new Todo('Aprender Machine learning');
-todoList.nuevoTodo(tarea);
 
-console.log(todoList);
+todoList.todos.forEach( todo => crearTodoHtml(todo) );
+// todoList.todos.forEach( crearTodoHtml ); //es lo mismo que la instruccion de arriba
 
-crearTodoHtml(tarea);
+console.log(todoList.todos);
